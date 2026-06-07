@@ -31,7 +31,7 @@ Any symbol kind not listed above keeps its default VS Code (Codicon) glyph.
 
 ### Note on macros
 
-The Microsoft C/C++ extension reports `#define` macros as the *String* kind, so
+Some C language servers report `#define` macros as the *String* kind, so
 `symbol-string` is mapped to `#` as well (this also affects string symbols in other
 languages, since product icon themes are global).
 
@@ -42,7 +42,7 @@ languages, since product icon themes are global).
    and pick **C Icon Theme** — or set it directly:
 
    ```jsonc
-   "workbench.productIconTheme": "c-cpp-symbols"
+   "workbench.productIconTheme": "c-symbols"
    ```
 
 ## Notes
@@ -64,14 +64,14 @@ The font is generated from the SVGs in [`icons/`](icons/):
 
 ```bash
 npm install
-npm run build      # icons/*.svg -> theme/fonts/c-cpp-icons.woff + the theme JSON
+npm run build      # icons/*.svg -> theme/fonts/c-icons.woff + the theme JSON
 ```
 
 - `build/gen-badges.mjs` vectorises the lowercase letter glyphs (`f`, `v`, `s`,
   `sf`, `e`, `ec`) from Segoe UI at a fixed x-height into `icons/*.svg`.
 - `build/build-font.mjs` assigns each icon a Private-Use-Area codepoint and rebuilds
-  [`theme/fonts/c-cpp-icons.woff`](theme/fonts/c-cpp-icons.woff) and
-  [`theme/c-cpp-product-icon-theme.json`](theme/c-cpp-product-icon-theme.json),
+  [`theme/fonts/c-icons.woff`](theme/fonts/c-icons.woff) and
+  [`theme/c-product-icon-theme.json`](theme/c-product-icon-theme.json),
   including the macro alias.
 
 To preview the glyphs in a browser, serve the project root and open

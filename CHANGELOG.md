@@ -1,9 +1,15 @@
 # Change Log
 
+## 0.0.8
+
+- Renamed the package, theme id, and font/theme files to drop the old prefix:
+  `c-symbol-icons`, theme id `c-symbols`, `c-icons.woff`,
+  `c-product-icon-theme.json`.
+
 ## 0.0.7
 
 - Renamed to **"C Icon Theme"** and narrowed the scope to C.
-- Removed the C++-specific glyphs (they fall back to the default Codicons):
+- Removed the non-C glyphs (they fall back to the default Codicons):
   method, class/typedef, template (type parameter), operator overload, property.
 - Fixed the `symbol-function` label (now just "function").
 

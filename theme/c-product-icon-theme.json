@@ -1,10 +1,10 @@
 {
   "fonts": [
     {
-      "id": "c-cpp-icons",
+      "id": "c-icons",
       "src": [
         {
-          "path": "./fonts/c-cpp-icons.woff",
+          "path": "./fonts/c-icons.woff",
           "format": "woff"
         }
       ],

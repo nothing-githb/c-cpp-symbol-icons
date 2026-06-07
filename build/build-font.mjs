@@ -20,10 +20,10 @@ const ttf2woff = require("ttf2woff");
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const iconsDir = join(root, "icons").replace(/\\/g, "/");
 const fontsDir = join(root, "theme", "fonts").replace(/\\/g, "/");
-const themePath = join(root, "theme", "c-cpp-product-icon-theme.json");
+const themePath = join(root, "theme", "c-product-icon-theme.json");
 
-const FONT_ID = "c-cpp-icons";
-const FONT_FILE = "c-cpp-icons.woff";
+const FONT_ID = "c-icons";
+const FONT_FILE = "c-icons.woff";
 
 // Every icon file maps 1:1 to a codicon symbol-* id (file name == id minus "symbol-").
 const names = (await readdir(iconsDir))
@@ -58,7 +58,7 @@ const svgFont = await new Promise((resolve, reject) => {
 });
 
 // 2) SVG font -> TTF -> WOFF.
-const ttf = svg2ttf(svgFont, { description: "C/C++ Symbol Icons", version: "1.0" });
+const ttf = svg2ttf(svgFont, { description: "C Symbol Icons", version: "1.0" });
 const ttfBuf = Buffer.from(ttf.buffer);
 const woffOut = ttf2woff(new Uint8Array(ttfBuf));
 await writeFile(join(fontsDir, FONT_FILE), Buffer.from(woffOut.buffer || woffOut));
@@ -70,7 +70,7 @@ for (const n of names) {
   iconDefinitions[`symbol-${n}`] = { fontCharacter: `\\${hex}` };
 }
 
-// Extra codicon ids that C/C++ language servers assign to constructs that have
+// Extra codicon ids that C language servers assign to constructs that have
 // no dedicated codicon, mapped (aliased) to the glyph of an existing icon file.
 //   <real codicon id> : <icon file basename whose glyph to reuse>
 const ALIASES = {

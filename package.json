@@ -1,8 +1,8 @@
 {
-  "name": "c-cpp-symbol-icons",
+  "name": "c-symbol-icons",
   "displayName": "C Icon Theme",
   "description": "A product icon theme that labels C symbols with clear initials and idiomatic marks (f functions, v variables, s structs, e enums, sf fields, # macros) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "halistahasahin",
   "author": {
     "name": "Halis Taha Sahin"
@@ -29,18 +29,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nothing-githb/c-cpp-symbol-icons.git"
+    "url": "https://github.com/nothing-githb/c-symbol-icons.git"
   },
   "bugs": {
-    "url": "https://github.com/nothing-githb/c-cpp-symbol-icons/issues"
+    "url": "https://github.com/nothing-githb/c-symbol-icons/issues"
   },
-  "homepage": "https://github.com/nothing-githb/c-cpp-symbol-icons#readme",
+  "homepage": "https://github.com/nothing-githb/c-symbol-icons#readme",
   "contributes": {
     "productIconThemes": [
       {
-        "id": "c-cpp-symbols",
+        "id": "c-symbols",
         "label": "C Icon Theme",
-        "path": "./theme/c-cpp-product-icon-theme.json"
+        "path": "./theme/c-product-icon-theme.json"
       }
     ]
   },
